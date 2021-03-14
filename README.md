@@ -18,5 +18,6 @@ Best method for this script to run is in a background process
 **COMMANDS TO RUN**
 
 -> **chmod +x bt_conn.sh**
+
 -> **sudo -b -u $(whoami) ./bt_conn.sh**
 
