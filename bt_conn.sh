@@ -39,7 +39,7 @@ fi
 while true; do
 	IS_ONLINE=$(wget $URL -q -O - 2>/dev/null | grep -o accountLogoff)	
 	if [ "$IS_ONLINE" ]; then
-		sleep 10
+		sleep 60
 	else
 		IS_ONLINE=false
 		#### Desktop Notification
@@ -50,6 +50,6 @@ while true; do
 		echo "Reconnecting BT-WiFi...." & disown
 		curl -d "username=$USERNAME&password=$PASSWORD" $CONN_URL
 		echo "Reconnected @ $(date)" >> bt_conn.log
-		sleep 10
+		sleep 30
 	fi
 done
